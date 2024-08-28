@@ -1,0 +1,79 @@
+/* GRID */
+
+
+
+/* APLICAMOS GRID AL PADRE */
+.gridPadre {
+    display: grid;
+    /* habilitamos el sistema de grillas en nuestra pagina */
+    /* configuramos cantidad de columnas */
+    grid-template-columns: repeat(6, 1fr);
+    /* LA CANTIDAD DE VALORES QUE INGRESEN = cantidad de columnas que se crean */
+
+    /* repeat()= repite una configuracion */
+    /* fr= nueva unidad de medida que solo se utiliza en grid */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* GAP  */
+    gap: 10px;
+}
+
+/* ESTILOS A LAS CAJAS */
+.gridHijo {
+    background-color: beige;
+    /* border-radius: 10px; */
+    border: 1px solid;
+
+}
+
+.gridHijo p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* GRID AREAS */
+.contenedor {
+    display: grid;
+    grid-template-areas:
+        "header nav"
+        "a b"
+        "aside aside"
+        "footer footer"
+    ;
+    text-align: center;
+}
+
+/* Diferentes areas */
+header {
+    background-color: aqua;
+    grid-area: header;
+}
+
+nav {
+    background-color: blueviolet;
+    grid-area: nav;
+
+}
+
+.sectionA {
+    background-color: brown;
+    grid-area: a;
+    border-radius: 10px;
+}
+
+.sectionB {
+    background-color: bisque;
+    grid-area: b;
+}
+
+aside {
+    background-color: chartreuse;
+    grid-area: aside;
+}
+
+footer {
+    background-color: cornflowerblue;
+    grid-area: footer;
+}

@@ -1,0 +1,167 @@
+/* GRIDS 2 */
+/* 
+Grid es una herramienta que nos permite acomodar los elementos . para esto divide en filas y columnas armando una grilla invisible 
+*/
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorGrid {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    background-color: #8c52ff;
+    /* Activamos grid con display=grid */
+    display: grid;
+    /* configuramos columnas con grid-template-colums */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Posicionamiento de los hijos desde el contenedor padre */
+    /* justify-items (horizontal)*/
+    /* aling-items (vertical) */
+    justify-items: center;
+    align-items: center;
+}
+
+.hijoGrid {
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Posicionar desde los itesm hijos */
+.rebelde {
+    background-color: aquamarine;
+    /* aling-self(vertical) y justify-self(horizontal) */
+    justify-self: end;
+    align-self: center;
+}
+
+/* MEDIA QUERIESSSS */
+/* DISEÑO RESPONSIVE=SE ADAPTA A CUALQUIER TIPO DE PANTALLA */
+.titleMedias {
+    color: red;
+}
+
+.pMedias {
+    color: aqua;
+}
+
+/* MAX-WIDTH:500PX = EL ANCHO MAXIMO, ES DECIR DESDE 0PX HASTA 500PX */
+@media (max-width:500px) {
+    .titleMedias {
+        color: blue;
+    }
+
+    .pMedias {
+        color: #8c52ff;
+        /* PARA OCULTAR */
+        display: none;
+    }
+}
+
+/* PODEMOS TRABAJAR CON RANGOS */
+/* PARA LOGRAR ESTO VAMOS A UTILIZAR EL OPERADOR AND */
+/* DESDE 501PX HASTA 900PX */
+@media (min-width:501px) and (max-width:900px) {
+    .titleMedias {
+        color: yellow;
+    }
+
+    .pMedias {
+        color: orange;
+    }
+}
+
+/* ORIENTACION DEL DISPOSITIVO
+
+PODEMOS CONFIGURAR DEPENDIENDO DE LA CONFIGURACION DE LA PANTALLA*/
+@media screen and (orientation:landscape) {
+    .titleMedias {
+        text-transform: uppercase;
+    }
+}
+
+/* PARA IMPRIMIR */
+@media print and (min-width:300px) {
+    * {
+        color: black
+    }
+}
+
+
+
+/* MOBILE FIRST */
+/* MOBILE FIRST= arrancamos primero con el diseño para el movil y despues para los otros dispositivos */
+.gridPadre {
+    text-align: center;
+    /* display: grid; */
+
+}
+
+header {
+    background-color: aqua;
+    grid-area: header;
+}
+
+nav {
+    background-color: brown;
+    grid-area: nav;
+}
+
+main {
+    background-color: chartreuse;
+    grid-area: main;
+}
+
+.primerSection {
+    background-color: coral;
+    grid-area: a;
+}
+
+.segundaSection {
+    background-color: crimson;
+    grid-area: b;
+}
+
+aside {
+    background-color: darkseagreen;
+    grid-area: aside;
+}
+
+footer {
+    background-color: #8c52ff;
+    grid-area: f;
+}
+
+/* VERSION TABLET */
+@media (min-width:768px) {
+    .gridPadre {
+        display: grid;
+        grid-template-areas:
+            "header nav"
+            "a b"
+            "main b"
+            "aside aside"
+            "f f"
+        ;
+    }
+}
+
+/* VERSION DESKTOP */
+@media (min-width:1024px) {
+    .gridPadre {
+        grid-template-areas:
+            "header header nav"
+            "a a b"
+            "main main b"
+            "aside aside b"
+            "f f f"
+        ;
+    }
+}

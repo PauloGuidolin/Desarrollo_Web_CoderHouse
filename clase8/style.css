@@ -1,0 +1,93 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    /* background-color: #0000; */
+    color: #fff;
+
+}
+body{
+    background-color: black;
+}
+.google {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* DAFONT - FUENTE LOCAL */
+@font-face {
+    font-family: sunshine;
+    src: url(fuentes/Sunshine\ Tropical.ttf);
+}
+
+.local {
+    font-family: sunshine;
+    font-weight: 100;
+
+}
+
+/* PSEUDOCLASES */
+
+/* HOVER-ANIMACION */
+.google:hover {
+    color: yellow;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* LINK */
+
+a:link {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 1px yellow;
+}
+
+a:visited {
+    color: red;
+}
+
+/* FOCUS */
+input:focus {
+    background-color: yellow;
+}
+input{
+    color: black;
+}
+
+.boton {
+    margin: 30px 0;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+/* NTH-CHILD() */
+.contenedorChild p:nth-child(2) {
+    color: blue;
+}
+
+/* NOT */
+.contenedorChild p:not(.curso){
+    color: red;
+}
+
+/* PSEUDOELEMENTOS */
+/* Cambiamos el color de la primer letra */
+h3::first-letter{
+    color: yellow;
+}
+h3::before{
+    content: "Hoy vemos ";
+}

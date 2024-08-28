@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+}
+
+/* POSITION */
+body {
+    position: relative;
+}
+
+.cajaPrincipal {
+    /* width y height */
+    width: 100%;
+    height: 620px;
+    background-color: aliceblue;
+    border: 1px solid;
+    position: relative;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    background-color: blanchedalmond;
+    border: 2px solid;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* position relative: 
+
+el elemento es posicionado de acuerdo al flujo normal del documento y luego es desplazado desde la posicion original
+
+
+*/
+
+.item1 {
+    position: relative;
+    top: 60px;
+    left: 100px;
+}
+
+/* position absolute: 
+
+el elemento es removido del flujo normal del documento y se ubica de forma relativa a su padre (el padre debe tener position relative) 
+
+*/
+.item2 {
+    position: absolute;
+    right: 150px;
+    bottom: 50px;
+}
+
+/* FIXED Y STICKY ME PERMITEN QUE EL ELEMENTO ESTE VISIBLE AUNQUE HAGA SCROLL */
+.item3 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.item4 {
+    position: sticky;
+    top: 0px;
+}
+
+/* *********FLEXBOX********** */
+.padreFlex {
+    background-color: antiquewhite;
+    height: 700px;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: auto;
+
+    /* Aplicamos Flexbox */
+    /* Activamos flex con display:flex */
+    display: flex;
+    /* Puedo acomodar todo en columnas o en filas */
+    /* 
+    column=columnas 
+    row=filas
+    */
+    flex-direction: row;
+    /* Me permite darle direccion a los elementos del padre */
+    flex-wrap: wrap;
+    /* me permite trabajar con diseño multilineas */
+    /* flex-flow me perimte combinar las dos ultimas propiedades, ejemplo= row y wrap en una misma propiedad */
+    flex-flow: row wrap;
+    /* 
+    JUSTIFY CONTENT= if flex direction==row entonces Acomoda los elemtnos hijos en el eje horizontal 
+    */
+    justify-content: center;
+    /* 
+    SPACE BETWEEN= SE SEPARAN LOS ITEMS A LO ANCHO DE LA PANTALLA
+    SPACE EVENLY= SE SEPARAN A LO LARGO PERO MENOS ESPACIO
+    SPACE AROUND= LO MISMO        
+    */
+    align-items: center;
+    /* ALING-ITEMS
+    
+    Si flex direction es row ordeno de manera horaizontal los items
+
+    */
+
+}
+
+.hijoFlex {
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hijoFlex p {
+    background-color: black;
+    padding: 10px;
+    display: inline;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    border-radius: 10px;
+
+}
+
+
+/* NAVBAR HTML */
+.header {
+    background-color: azure;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* POSITION STICKY PARA ANCLAR EL HEADER ARRIBA */
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.en {
+    text-decoration: none;
+}
+
+/* Boton de wsp */
+.boton {
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* CARDS */
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: beige; */
+    border-radius: 10px;
+    /* SOMBREADO */
+    /* BOX SHADOW */
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+
+}
+
+.cursoTitulo {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cursoDescripcion {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cursoPrecio {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px;
+    background-color: azure;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,54 @@
+
+header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #022f40;
+    color: white;
+}
+/* 
+
+PROPIEDAD DISPLAY: 
+me permite modificar si una etiqueta es en linea o en bloque 
+
+*/
+.usoDisplay{
+    /* cambio de inline a block */
+    display: block;
+}
+
+li{
+    /* colocar los li en inline */
+    display: inline;
+}
+
+/* modelo de caja */
+/* 
+para aplicar dimensiones utilizamos width=ancho y height=alto 
+*/
+.caja{
+    background-color: beige;
+    width: 150px;
+    height: 150px;
+    border: 10px #022f40 solid;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 50px;
+}
+
+/* propiedades de box modeling:
+border: linea divisioria del elemento
+margin: todo lo que esta desde el border hacia afuera
+padding: desde el borde hacia adentro
+*/
+/* border bottom:
+
+top=arriba
+bottom=abajo
+left=izquierda
+right=derecha
+
+*/
+.main{
+background-color: #38aecc;
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

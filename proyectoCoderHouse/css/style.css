@@ -1,0 +1,288 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+html,
+body {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+/* ICONOS NAV */
+.ulNav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* FOTO ICONOS */
+.imgNav {
+    width: 40px;
+}
+
+/* Presentacion */
+.presentacion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titulo */
+.title {
+    font-size: 3rem;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+}
+
+/* h3Presentacion */
+.h3Presentacion {
+    font-size: 1, 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 0 30px;
+}
+
+.secondSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2daSection {
+    height: 300px;
+    padding: 40px 0 0 0;
+}
+
+/* <!-- #8c52ff --> */
+.thirdSection {
+    text-align: center;
+    background-color: #8c52ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.thirdSection h2 {
+    margin-top: 30px;
+    color: white;
+}
+
+.thirdSection .p {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0 200px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 700;
+
+}
+
+.contenedorPadre {
+    margin-top: 40px;
+    /* background-color: aqua; */
+    padding: 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    /* flex-wrap: wrap; */
+}
+
+.contenedorCards {
+    /* width: 700px; */
+    background-color: white;
+    /* padding: 10px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 10px; */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* flex-wrap: wrap; */
+}
+
+.card {
+    /* padding: 20px 40px; */
+    text-align: center;
+    /* background-color: brown; */
+    /* height: 700px; */
+    /* padding: 0px 20px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    /* margin: 10px; */
+}
+
+.imgCard {
+    margin-top: 30px;
+    width: 50%;
+    height: 70px;
+}
+
+.h3Cards {
+    font-size: 2rem;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.h4Card {
+    font-size: 1.5rem;
+    color: #8c52ff;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+
+}
+
+.card p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.blanco {
+    margin-top: 60px;
+    /* height: 820px; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: end;
+    /* background-color: bisque; */
+    /* background-color: ; */
+}
+
+.contenedorBlanco {
+    top: 20px;
+    text-align: center;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 0px; */
+}
+
+.contenedorBlanco h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+.what {
+    /* background-color: blue; */
+    text-align: center;
+}
+
+.what ul {
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.what ul li {
+    /* background-color: brown; */
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.contenedorBlanco ul li h3 {
+    font-size: 1.7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* box-shadow: 0 4px 10px rgb(0,0,0,0.1); */
+
+}
+
+.contenedorBlanco ul li p {
+    font-size: 1.3rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-weight: bold;
+    color: #8c52ff;
+    padding: 0px 0px;
+}
+
+/* DISEÑO MOVIL */
+@media (min-width:300px) and (max-width:700px) {
+    .ulNav li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 5px;
+    }
+
+    .thirdSection h2 {
+        font-size: 1.7rem;
+    }
+
+    .thirdSection .p {
+        padding: 0 20px;
+    }
+
+    .contenedorCards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80vw;
+        padding: 0px;
+
+    }
+
+    .card h4 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1.5rem;
+        /* text-transform: lowercase; */
+        font-weight: 400;
+    }
+
+    .contenedorBlanco {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contenedorBlanco h2 {
+        font-size: 1.8rem;
+    }
+}

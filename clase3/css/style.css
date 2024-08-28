@@ -1,0 +1,97 @@
+/* 
+
+sintaxis css:
+
+selector{
+
+propiedad:valor
+
+}
+
+*/
+h1 {
+    /* color: cambiar color al texto */
+    color: red;
+}
+
+.verde {
+    color: green;
+}
+
+#final {
+    color: blue;
+}
+
+/* REGLAS CSS: 
+
+Padres e hijos:
+
+footer p{
+
+}
+
+*/
+footer p {
+    color: aquamarine;
+}
+
+/* Herencia 
+
+se aplica a los hijos del bloque contenedor
+
+*/
+footer {
+    font-size: 25px;
+}
+
+/* Cascada
+
+la ultima instruccion es la que predomina
+
+*/
+
+/* PROPIEDADES DE CSS MAS UTILIZADAS */
+/* Estilos a los textos */
+.texto {
+    /* me permite centrar el texto */
+    text-align: center;
+    /* peso de la fuente,ejemplo negrita */
+    font-weight: bold;
+    /* podemos elegir la fuente */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*Interlineado */
+    line-height: 30px;
+}
+
+/* ENLACES */
+a {
+    /* quitar subrayado */
+    text-decoration: none;
+    /* mayus */
+    text-transform: uppercase;
+    /* color a la fuente */
+    color: black;
+    /* tamaño */
+    font-size: 20px;
+}
+
+/* Estilos para las listas */
+li {
+    /* Eliminar viñeta */
+    list-style: none;
+
+}
+
+/* Estilos para fondos */
+body{
+    /* Cambio color de fondo */
+    background-color: aliceblue;
+    /* fondo con una imagen */
+    background-image: url("../img/messi.jpeg");
+    /* para no repetir */
+    background-repeat: no-repeat;
+    /* para centrar fondo */
+    background-position: center;
+    /* ocupa todo el ancho */
+    background-size: cover;
+}
