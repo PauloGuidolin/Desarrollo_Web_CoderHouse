@@ -1,0 +1,22 @@
+
+
+$colorTitulos:red;
+
+header{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    h1{
+        color: $colorTitulos;
+    }
+    ul li{
+        list-style: none;
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+        // gap: 10px;
+        
+    }
+}
